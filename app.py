@@ -2,10 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from langchain_openai import ChatOpenAI
-from langgraph.graph import StateGraph, MessagesState, START, END
-from google.colab import userdata
-from langchain.prompts import ChatPromptTemplate
-# from langchain_openai import ChatOpenAI  # or the correct import for your version
 
 st.set_page_config(page_title="Data Explorer App + AI", page_icon="🤖")
 
@@ -16,9 +12,8 @@ st.write("Upload a CSV file, explore data, and chat with an AI model!")
 api_key = st.secrets["OPENAI_API_KEY"]
 
 # Initialize model
-model_name = "gpt-4o-mini"  # for example
 creative_model = ChatOpenAI(
-    model=model_name,
+    model="gpt-4o-mini",
     api_key=api_key,
     temperature=0.7
 )
