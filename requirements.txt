@@ -1,3 +1,8 @@
 streamlit
 pandas
 matplotlib
+langchain
+langchain-openai
+google.colab
+langgraph.graph
+langchain.prompts
